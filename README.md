@@ -58,7 +58,7 @@ Skills: STM32 firmware · USB HID · I²S audio · matrixed I/O · system archit
 Connect
 
 📧 carlisleconnor2@gmail.com
-💼 LinkedIn
+💼 www.linkedin.com/in/connor-carlisle
 💼 Handshake
 
 
