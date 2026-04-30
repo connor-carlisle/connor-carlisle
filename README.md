@@ -12,7 +12,7 @@ About Me
 
 Focus Areas
 Industrial Controls & Automation — PLC programming on AutomationDirect Productivity hardware (Ladder Logic), expanding into CODESYS / Structured Text for IEC 61131-3 work; conveyor and material-handling control, QR/barcode-driven sortation, HMI design, and digital twin simulation for offline validation
-Power Electronics — 3-phase motor drives, gate driver circuits, switching topologies, current sensing, Field Oriented Control (FOC), Class D audio amplifiers
+Power Electronics — 3-phase motor drives, Dc-Dc converters, gate driver circuits, switching topologies, current sensing, Field Oriented Control (FOC), Class D audio amplifiers
 Embedded Systems — STM32 firmware, peripheral configuration, USB HID, I²S audio, real-time control loops
 PCB Design — Hierarchical schematics, multi-rail power, mixed-signal grounding, high-current routing, EMI-aware layout
 
