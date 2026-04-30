@@ -59,7 +59,7 @@ Connect
 
 📧 carlisleconnor2@gmail.com
 💼 www.linkedin.com/in/connor-carlisle
-💼 app.joinhandshake.com/profiles/connorcarlisle
+💼 https://app.joinhandshake.com/profiles/connorcarlisle
 
 
 <sub>📌 Last updated: April 2026</sub>
