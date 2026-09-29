@@ -1,65 +1,51 @@
-Hi, I'm Connor 👋
-Electrical Engineering Student · Industrial Controls · Power Electronics · Embedded Systems
+# Connor Carlisle
 
-About Me
+**Electrical Engineering, University of Mississippi (B.S. expected May 2028)** · Honors College · GPA 3.7
 
-🎓 Sophomore EE undergrad
-💼 PCB Design Intern — hierarchical multi-board, mixed-signal systems in Altium
-⚙️ Building toward industrial automation: PLCs, 3-phase motor drives, conveyor systems, machine vision
-📍 Mississippi
-📬 Seeking Fall 2026 co-op or Summer 2027 internship in controls, automation, or power electronics
+Audio DSP · Embedded Systems · Hardware Design
 
+Seeking a **Summer 2027 internship** in DSP, embedded firmware, or hardware design.
 
-Focus Areas
-Industrial Controls & Automation — PLC programming on AutomationDirect Productivity hardware (Ladder Logic), expanding into CODESYS / Structured Text for IEC 61131-3 work; conveyor and material-handling control, QR/barcode-driven sortation, HMI design, and digital twin simulation for offline validation
-Power Electronics — 3-phase motor drives, Dc-Dc converters, gate driver circuits, switching topologies, current sensing, Field Oriented Control (FOC), Class D audio amplifiers
-Embedded Systems — STM32 firmware, peripheral configuration, USB HID, I²S audio, real-time control loops
-PCB Design — Hierarchical schematics, multi-rail power, mixed-signal grounding, high-current routing, EMI-aware layout
+📬 carlisleconnor2@gmail.com · [LinkedIn](https://www.linkedin.com/in/connor-carlisle) · [Handshake](https://app.joinhandshake.com/profiles/connorcarlisle)
 
-Tools & Tech
-PLC & Automation
-AutomationDirect Productivity Suite · Ladder Logic · CODESYS (learning) · Structured Text — IEC 61131-3 (learning) · Factory I/O (digital twin)
-EDA & Hardware
-Altium Designer · KiCad · LTspice · Oscilloscope · Logic Analyzer · Hand SMD assembly (0603 and up)
-Microcontrollers
-STM32 (F4) · ESP32 · Arduino
-Languages
-C / C++ · Python · MATLAB · Simulink · SystemVerilog
-Simulation & Modeling
-MATLAB / Simulink · LTspice · Factory I/O · 3D mechanical modeling for digital twin assets
+---
 
-Featured Projects
-⚙️ 3-Phase Motor Driver (in progress)
-Custom 3-phase BLDC / induction motor driver board. Power stage with gate drivers, shunt-based current sensing, DC-bus filtering, and microcontroller-side Field Oriented Control (FOC). Designed in Altium with attention to high-current routing, thermal relief, switching-node containment, and isolation between power and control domains.
+## Featured Projects
 
-Skills: power electronics · gate driver design · FOC firmware · high-current PCB layout · thermal management
+### 🎧 LMS Adaptive Noise Canceller — *in progress*
+Python/NumPy simulation → fixed-point real-time port on STM32F446RE
 
-⚡ Synchronous Buck DC-DC Converter (in progress)
-Step-down switching converter built around a controller IC driving high- and low-side N-channel power FETs. Inductor sized for target ripple current and saturation margin, output capacitance selected for ripple voltage and transient response, and a Type II/III compensation network for stable closed-loop behavior across load. PCB layout focused on tight input-loop area, switching-node containment, low-impedance return paths, and thermal handling for sustained load current.
+- Simulation harness tests LMS convergence rate, misadjustment, and weight-error floor against closed-form theory
+- **Phase 1 (white noise): 8/8 gates passed · Phase 2 (colored noise): 7/7 gates passed**
+- Per-eigenmode analysis of the 64-tap input autocorrelation matrix; log-linear fits misestimate colored-noise time constants by 37–47%, replaced with projection onto the λ<sub>min</sub> eigenvector
+- Next: two-channel recorded-audio analysis, then real-time on STM32 with two SPH0645 I²S MEMS mics and a UDA1334A I²S DAC in a 1 m duct rig
+- Precursor to a senior-year FxLMS active noise control capstone
 
-Skills: synchronous switching topology · gate drive timing · magnetics selection · feedback / compensation design · switching-node PCB layout · efficiency analysis
+➡️ [Repository](https://github.com/connor-carlisle/lms-noise-canceller)
 
-🏭 Conveyor + Vision Sortation Cell (in progress)
-End-to-end automation cell: PLC-controlled conveyor with QR / barcode-driven part sortation. Real-hardware ladder logic developed on AutomationDirect Productivity Suite, with a parallel CODESYS + Structured Text implementation paired to a Factory I/O digital twin for offline validation, fault-injection testing, and HMI development before deploying back to physical hardware.
+### ⚡ Synchronous Buck Converter — TI LM5145 · *prototype built, bench validation next*
+- 24 V → 5 V, 3 A, 500 kHz, voltage-mode control, Type III compensation
+- 4-layer board (Top / GND / PWR / Bottom), hot loop placed first
+- Predicted efficiency ~82%
 
-Skills: PLC programming · industrial vision · digital twin simulation · HMI design · state machine logic · sim-to-hardware workflow
+➡️ [Repository](https://github.com/connor-carlisle/Synchronous-Buck-DC-Converter)
 
-🔊 Bluetooth Speaker System
-Stereo Bluetooth speaker built around the Microchip BM83 module and TI TPA3116D2DAD Class D amplifier. Hierarchical schematic in Altium, single ~100 × 100 mm board, LM1117-3.3 LDO with reset supervisor, BTL LC output filter, and star-grounded SGND/GND scheme. Antenna at board edge with copper pour exclusion for clean RF.
+### 🔊 Stereo Bluetooth Amplifier — Microchip BM83 + TI TPA3116D2 · *prototype built, bench validation next*
+- 2 × 50 W into 4 Ω class-D, BTL LC output filters, hierarchical schematic
+- Mixed-signal star grounding and RF keep-out for the BM83 antenna
 
-Skills: hierarchical schematics · mixed-signal grounding · power integrity · RF keep-outs · ERC clean
+➡️ [Repository](https://github.com/connor-carlisle/bm83-tpa3116-bluetooth-speaker)
 
-🎛️ 4-Track DJ Controller
-USB control surface + stereo audio output PCB. STM32F405 MCU, PCM5102A I²S DAC, TPA6132A2 headphone amp, and CD74HC4067 muxes for matrixed encoder/button I/O. Companion Python software (NumPy, scipy.signal, sounddevice) handles mixing, EQ, and effects. Hand-solderable packages throughout.
+---
 
-Skills: STM32 firmware · USB HID · I²S audio · matrixed I/O · system architecture
+## Tools
 
+**Languages:** Python (NumPy) · C (embedded) · C++ · MATLAB · SystemVerilog
+**Embedded:** STM32 (F4) · I²S audio
+**EDA & Hardware:** Altium Designer · Xilinx Vivado · LTspice · KiCad · Oscilloscope · Logic Analyzer · Hand SMD assembly
+**DSP:** LMS/NLMS adaptive filtering · FIR filters · autocorrelation eigen-analysis
 
-Connect
+---
 
-📧 carlisleconnor2@gmail.com
-💼 www.linkedin.com/in/connor-carlisle
-💼 https://app.joinhandshake.com/profiles/connorcarlisle
-
-
-<sub>📌 Last updated: April 2026</sub>
+## Outside the Lab
+Classical cellist, 10+ years (first chair, LOU Orchestra; Memphis Youth Symphony). Electronic music producer and performer as **LEDGXR**.
